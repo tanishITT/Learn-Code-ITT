@@ -19,7 +19,7 @@ public class CountryCodeService {
                 System.out.println("Turning Off!");
                 break;
             }
-            printCountryName(inputCode);
+            printNeighbourNames(inputCode);
         }
     }
 
@@ -28,12 +28,12 @@ public class CountryCodeService {
         return scanner.nextLine().toLowerCase();
     }
 
-    private void printCountryName(String inputCode){
-        String countryName = registry.getCountryName(inputCode);
-        if(countryName == null){
+    private void printNeighbourNames(String inputCode){
+        CountryData country = registry.getCountry(inputCode);
+        if(country == null){
             System.out.println("Country Name Not Found");
             return;
         }
-        System.out.println("Country Name for " + inputCode.toUpperCase() + ": " + countryName);
+        System.out.println(country.name() + ": " + country.neighbours());
     }
 }
