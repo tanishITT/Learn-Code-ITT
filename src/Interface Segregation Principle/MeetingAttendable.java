@@ -1,0 +1,3 @@
+interface MeetingAttendable {
+    void attendMeeting();
+}

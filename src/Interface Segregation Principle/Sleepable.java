@@ -1,0 +1,3 @@
+interface Sleepable {
+    void sleep();
+}
