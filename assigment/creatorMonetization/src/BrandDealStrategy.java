@@ -1,6 +1,7 @@
 public class BrandDealStrategy implements EarningStrategy {
 
     private final double baseContractAmount;
+    private final double fixedEngagementRate = 0.05;
 
     public BrandDealStrategy(double baseContractAmount) {
         this.baseContractAmount = baseContractAmount;
@@ -14,7 +15,7 @@ public class BrandDealStrategy implements EarningStrategy {
             Region region,
             Season season
     ) {
-        if (season == Season.HOLIDAY && engagementRate > 0.05) {
+        if (season == Season.HOLIDAY && engagementRate > fixedEngagementRate) {
             return baseContractAmount * 1.2;
         }
         return baseContractAmount;
