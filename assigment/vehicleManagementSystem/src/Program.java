@@ -30,7 +30,7 @@ public class Program {
 
         manager.displayAll();
 
-        System.out.printf("\nTotal Fleet Value: $%.2f%n", manager.calcTotalValue());
+        System.out.printf("\nTotal Fleet Value: $%.2f%n", manager.calculateTotalValue());
 
         manager.startAllVehicles();
 

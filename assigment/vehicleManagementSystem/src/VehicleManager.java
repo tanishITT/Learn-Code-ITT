@@ -17,7 +17,7 @@ public class VehicleManager {
         }
     }
 
-    public double calcTotalValue() {
+    public double calculateTotalValue() {
         double total = 0;
 
         for (Vehicle vehicle : vehicles) {
