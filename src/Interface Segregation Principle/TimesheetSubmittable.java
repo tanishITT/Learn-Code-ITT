@@ -1,0 +1,3 @@
+interface TimesheetSubmittable {
+    void submitTimesheet();
+}
